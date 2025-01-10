@@ -1,0 +1,315 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  background-color: #f0f0f5; 
+  min-height: 100vh;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+.background-left {
+  position: absolute;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.background-right {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background-color: hsla(276, 100%, 81%, 0.1);
+  border-top-left-radius: 80%;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.phone-container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 80px; /* Add some top margin */
+  margin-left: 100px;
+  width: 375px; /* iPhone X width */
+  position: relative;
+  padding: 20px;
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 40px;
+  background-color: hsl(0, 0%, 100%);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.content {
+  box-sizing: border-box;
+}
+
+.arrow {
+  border: solid hsl(270, 20%, 96%);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.left {
+  transform: rotate(135deg);
+}
+
+.message {
+  background-color: hsla(276, 100%, 81%, 0.2);
+  border-radius: 20px;
+  color: hsl(276, 55%, 52%);
+  font-size: 11px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  max-width: 60%;
+}
+
+.message.sent {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(271, 15%, 43%);
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message.sent.last {
+  max-width: 40%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  padding-bottom: 20px;
+}
+
+.profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid white;
+  margin-top: 10px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin-top: 10px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(270, 20%, 96%);
+  padding-bottom: 5px;
+}
+
+.profile-description {
+  font-size: 10px;
+  font-weight: 400;
+  color: hsl(206, 6%, 79%);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.dot {
+  display: flex;
+  margin-bottom: 2px;
+  border: solid hsl(206, 6%, 79%);
+  border-width: 0 3px 3px 0;
+}
+
+.chat-info {
+  background-color: hsl(270, 20%, 96%);
+  padding: 15px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.images img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid lightgrey;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 7px;
+  background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  padding: 10px;
+  cursor: pointer;
+  max-width: 70%;
+}
+
+.option input {
+  all: unset;
+  width: 12px;
+  height: 12px;
+  background-color: hsl(293, 100%, 63%);
+  border-radius: 50%;
+  border: 1px solid hsl(289, 100%, 72%);
+}
+
+.option-description {
+  flex-grow: 1;
+  font-size: 12px;
+  color: hsl(206, 6%, 79%);
+}
+
+.option-price {
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.send-message {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(270, 20%, 96%);
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.send-message input {
+  border: none;
+  flex-grow: 1;
+  font-size: 14px;
+  outline: none;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.send-message input::placeholder {
+  color: hsl(206, 6%, 79%);
+  font-size: 12px;
+}
+
+.send-message button {
+  background-color: hsl(271, 36%, 24%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.right {
+  transform: rotate(-45deg);
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.bottom-section {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.bottom-section h2 {
+  color: hsl(271, 36%, 24%);
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.bottom-section p {
+  color: hsl(270, 7%, 64%);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 50rem) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .background-left {
+    width: 50%;
+    height: 50%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 100%;
+  }
+
+  .background-right {
+    width: 50%;
+  }
+
+  .phone-container {
+    margin-left: 0;
+  }
+
+  .bottom-section {
+    text-align: center;
+  }
+}
